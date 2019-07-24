@@ -35,10 +35,19 @@
       </li>
       
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="What are you looking for?" aria-label="Search">
-      <button class="btn" type="submit">Search</button>
-    </form>
+
+<% if user_signed_in? %>
+ <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      Welcome
+      <%= current_user.email %>
+      </li> 
+      </ul>
+
+      <%end%>
+
+
+
   </div>
 </nav>
 
