@@ -8,9 +8,9 @@ class ReviewsController < ApplicationController
       end
 
     def create
-       @review =  current_user.reviews.create(params.require(:review).permit( :feedback, :rate ))
-  
-        if @review 
+       @review =  current_user.reviews.new(params.require(:review).permit( :feedback, :rate ))
+        @review.username = current_user.email
+        if @review.save 
             redirect_to reviews_path
         else 
             redirect_to root_path

@@ -3,12 +3,8 @@ class PostsController < ApplicationController
         @post = Post.new
     end 
 
-    def new
-        
-        redirect_back(fallback_location: root_path)
-    end
+ 
     def create
-        
         @post = current_user.posts.create(params.require(:post).permit( :question, :answer_one, :answer_two, :answer_three ))
         @answers = [@post.answer_one, @post.answer_two, @post.answer_three]
         @answer = @answers.sample

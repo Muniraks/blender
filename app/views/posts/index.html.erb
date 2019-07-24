@@ -13,12 +13,10 @@
 
  <div> -->
 <div class="jumbotron" style="max-width: 60rem; text-align: center; margin: auto;">
-<h1>
 <%= form_for @post do |f| %>
-    <%= f.label :question, 'What are you thinking of ..?'%>
+    <h1><%= f.label :question, 'What are you thinking of ..?'%></h1>
     <br>
-    <%= f.text_field :question%>
-    </h1>
+    <h1><%= f.text_field :question%></h1>
     <h3> Share your options <h3>
     <%= f.label :answer_one, '#1'%>
     <%= f.text_field  :answer_one%>
@@ -34,7 +32,7 @@
 
 <% end %>
 
- <%= link_to 'Re-blend', new_post_path   , :class => "btn waves-effect waves-light" %>
+ <%= link_to 'Re-blend', posts_path , :class => "btn waves-effect waves-light" %>
 
 <div>
 

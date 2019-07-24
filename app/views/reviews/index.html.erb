@@ -25,5 +25,5 @@
 
 <p>
 <%= link_to 'Add', new_review_path %> 
-
+<%= link_to 'Delete ', @review, method: :delete , data: { confirm: "Are you sure?" } %>
 </p>
