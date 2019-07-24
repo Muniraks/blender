@@ -1,12 +1,18 @@
 
-
+<p>
+<%= @review.feedback %>
+</p>
+<p>
+<%= @review.rate %>
+</p>
+<%= @review.username %>
 
 <% if user_signed_in?%>
-   <% if current_user.id == @reviews.user_id%>
-        <%= link_to 'Edit', edit_review_path(@reviews) %>
+   <% if current_user.id == @review.user_id%>
+        <%= link_to 'Edit', edit_review_path(@review) %>
         <%= link_to 'Delete', @review, method: :delete, data: { confirm: 'Are you sure?' } %>
     <br> <br> <br> <br> <br>
 <%end%>
 <%end%>
-       <strong><%= link_to 'Back', review_path(@reviews.review_id) %></strong>
+       <strong><%= link_to 'Back', reviews_path %></strong>
        

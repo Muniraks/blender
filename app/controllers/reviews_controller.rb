@@ -18,14 +18,10 @@ class ReviewsController < ApplicationController
       end
 
 
-      def destroy
-        @review.destroy
-        respond_to do |format|
-          format.html { redirect_to reviews_url, notice: 'Review was successfully destroyed.' }
-          format.json { head :no_content }
-        end
-        
-    end
+     
+    def show 
+        @review = Review.find(params[:id])
+    end 
 
 
 
@@ -38,17 +34,24 @@ class ReviewsController < ApplicationController
 
       def update
         review = Review.find(params[:id])
-	    review.update(params.require(:review).permit(:username, :feedback, :rate))
+	    review.update(params.require(:review).permit( :feedback, :rate))
 	
-	    redirect_to review
+	    redirect_to review_path(review)
       end
+
+
+      def destroy
+      @review = Review.find(params[:id]).destroy
+      redirect_to reviews_path, notice: "Review has been deleted"
+    end
+
 
 
 
     private
 
     def review_params
-        params.require(:review).permit(:username,:feedback,:reate)
+        params.require(:review).permit(:username,:feedback,:rate)
     end
 
 end

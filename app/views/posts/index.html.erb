@@ -16,19 +16,20 @@
     <%= f.text_field :question%>
     </h1>
     <h3> Share your options <h3>
-    <%= f.label :answer_one, 'Option #1'%>
-    <%= f.text_field :answer_one%>
+    <%= f.label :answer_one, '#1'%>
+    <%= f.text_field  :answer_one%>
     <br>
-    <%= f.label :answer_two, 'Option #2'%>
+    <%= f.label :answer_two, '#2'%>
     <%= f.text_field :answer_two%>
      <br>
-    <%= f.label :answer_three, 'Option #3'%>
+    <%= f.label :answer_three, '#3'%>
     <%= f.text_field :answer_three%>
      <br>
-  <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+  <%= f.submit "Blend-it", :class => "btn waves-effect waves-light" %>
 
 <% end %>
-<br>
+
+<div>
 
 <div class="alert alert-dismissible alert-primary">
 <% if @answer %>
@@ -37,7 +38,7 @@ Your answer is:
 <%= @answer %>
 
 <% end  %>
-<div>
+</div>
 
 </div>
 </div>
