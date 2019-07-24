@@ -1,9 +1,16 @@
-<div class="jumbotron">
+<br>
+<br>
+<br>
+<div class="jumbotron" style="max-width: 45rem; text-align: center; margin: auto;">
+  <img src="/assets/blender.jpg" width="200px" height="200px" />
   <h1 class="display-3"> BLENDER </h1>
   <p class="lead"> Can't decide? put your own ideas and options and blend it to get your decision. </p>
 
   
-    <a class="btn btn-primary btn-lg" href="http://localhost:3000/users/sign_up" role="button">SIGN UP!</a>
-    <a class="btn btn-primary btn-lg" href="http://localhost:3000/users/sign_in" role="button">LOG IN!</a>
- 
+  
+ <%= link_to 'Sign up', new_user_registration_path , class:"btn btn-primary btn-lg" %> 
+ <%= link_to 'Log In', new_user_session_path, class:"btn btn-primary btn-lg" %> 
+ <%= link_to 'Log Out', destroy_user_session_path, method: :delete , class:"btn btn-primary btn-lg" %> 
+
+ <%= link_to 'Delete Account', user_registration_path, method: :delete , class: "btn btn-primary btn-lg" %>
 </div>

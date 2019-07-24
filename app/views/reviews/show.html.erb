@@ -1,18 +1,29 @@
 
-<p>
+<br>
+<div class="card border-primary mb-3" style="max-width: 15rem; margin: auto; text-align:center">
+<br>
+<p> Feedback :
 <%= @review.feedback %>
 </p>
 <p>
+Rate :
 <%= @review.rate %>
 </p>
 <%= @review.username %>
 
 <% if user_signed_in?%>
    <% if current_user.id == @review.user_id%>
+  
         <%= link_to 'Edit', edit_review_path(@review) %>
         <%= link_to 'Delete', @review, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <br> <br> <br> <br> <br>
+    <br> <br>
 <%end%>
 <%end%>
+
        <strong><%= link_to 'Back', reviews_path %></strong>
        
+
+
+       
+ 
+  </div>

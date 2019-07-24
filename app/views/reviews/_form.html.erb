@@ -11,16 +11,20 @@
   <% end %>
   <%= f.hidden_field :review_id, :value => params[:review_id] %>
   <div class="input-field col s6">
-    <%= f.label :feedback, 'feedback'%>
+  <br>
+    <%= f.label :feedback, 'Feedback'%>
+    <br>
     <%= f.text_field :feedback%>
   </div>
   <div class="input-field col s6">
-    <%= f.label :rate, 'rate' %>
+    <%= f.label :rate, 'Rate' %>
+    <br>
     <%= f.text_field :rate %>
   </div>
   
     <%= f.hidden_field :review_id, :value => @review %>
-  <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+    <br>
+  <%= f.submit "Submit", :class => "btn btn-secondary"%>
 <% end %>
 
 

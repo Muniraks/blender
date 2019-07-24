@@ -1,18 +1,22 @@
 
 
 <!-- Adding cases to randomize  -->
+<div style="text-align:center;">
+<br>
 <h1> BLEND-IT </h1>
-<p> When the decision is too hard it's simple to use Blender </p>
+<h5> When the decision is too hard it's simple to use Blender </h5>
+<div>
 
 
 <!-- > <input class="question" type="text" placeholder="Enter your question here..">
  </div>
 
  <div> -->
-<div class="jumbotron">
+<div class="jumbotron" style="max-width: 60rem; text-align: center; margin: auto;">
 <h1>
 <%= form_for @post do |f| %>
     <%= f.label :question, 'What are you thinking of ..?'%>
+    <br>
     <%= f.text_field :question%>
     </h1>
     <h3> Share your options <h3>
@@ -26,15 +30,18 @@
     <%= f.text_field :answer_three%>
      <br>
   <%= f.submit "Blend-it", :class => "btn waves-effect waves-light" %>
+ 
 
 <% end %>
+
+ <%= link_to 'Re-blend', new_post_path   , :class => "btn waves-effect waves-light" %>
 
 <div>
 
 <div class="alert alert-dismissible alert-primary">
 <% if @answer %>
 
-Your answer is: 
+Hmm?
 <%= @answer %>
 
 <% end  %>
