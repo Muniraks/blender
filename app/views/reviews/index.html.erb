@@ -1,0 +1,27 @@
+<table class="table">
+  
+  <thead>
+    <tr>
+      <th scope="col">username</th>
+      <th scope="col">Feedback</th>
+      <th scope="col">Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+   <% @reviews.each do |review| %>
+      <tr>
+        <td><%= link_to review.username, review_path(review) %></td>
+        <td><%= review.feedback %></td>
+        <td><%= review.rate %></td>
+       
+      </tr>
+  <% end %>
+
+
+
+  </tbody>
+</table>
+
+<%= link_to 'Add', new_review_path %> 
+<%= link_to 'Destroy', @review, method: :delete, data: { confirm: 'Are you sure?' } %>

@@ -1,0 +1,26 @@
+<%= form_with(model: @review, local: true) do |f| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= f.hidden_field :review_id, :value => params[:review_id] %>
+  <div class="input-field col s6">
+    <%= f.label :feedback, 'feedback'%>
+    <%= f.text_area :feedback%>
+  </div>
+  <div class="input-field col s6">
+    <%= f.label :rate, 'rate' %>
+    <%= f.text_field :rate %>
+  </div>
+  
+    <%= f.hidden_field :review_id, :value => @review %>
+  <%= f.submit "Submit", :class => "btn waves-effect waves-light" %>
+<% end %>
+
+

@@ -10,6 +10,42 @@
   </head>
 
   <body>
+  
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<%= link_to 'Log In', new_user_session_path %> 
+<%= link_to "Sign Up", new_user_registration_path %>
+<%= link_to "Edit Logged In User", edit_user_registration_path %> 
+<%= link_to 'Log Out', destroy_user_session_path, method: :delete %> 
+<%= link_to 'Delete Account', user_registration_path, method: :delete %>
+  <a class="navbar-brand" href="#">BLENDER</a>
+<img src="Users⁩/muniraalshuhail⁩/sei⁩/projects⁩/project-2⁩/random_app⁩/app⁩/assets⁩/images⁩/blender.png" width="30" height="30" alt="">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" <%= link_to 'Home', homes_path %> </a>
+      
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" <%= link_to 'Blend-it', posts_path %> </a>
+      </li>
+
+        <li class="nav-item">
+        <a class="nav-link" <%= link_to 'Feedback', reviews_path %> </a>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="What are you looking for?" aria-label="Search">
+      <button class="btn" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
     <%= yield %>
   </body>
 </html>
