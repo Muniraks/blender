@@ -1,24 +1,27 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# Project Two
+## Blender
 
-* Ruby version
+---
 
-* System dependencies
+[Blender] (https://blenderr.herokuapp.com) is a decision-making application, where you can put all your ideas and options and blend them to get a decision. 
 
-* Configuration
+---
 
-* Database creation
+### Technical Requirements
 
-* Database initialization
+#### Authentication
+- User is able to sign up
+- User is able to sign in
+- User is able to change password
+- User is able to sign out
 
-* How to run the test suite
+#### 2 extra resources  (other than User)
+- User is able to create a resource
+- User is able to edit a resource
+- User is able to view all resources they created
+- User is able to view a single resource they created
+- User is not able to edit or delete other users' resources
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
